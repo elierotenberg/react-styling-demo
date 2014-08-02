@@ -1,0 +1,26 @@
+{
+  "name": "react-styling-demo",
+  "version": "0.0.0",
+  "description": "react-animate, react-css and other React styling demos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elierotenberg/react-styling-demo.git"
+  },
+  "keywords": [
+    "react",
+    "react-animate",
+    "react-css",
+    "styling",
+    "demo"
+  ],
+  "author": "Elie Rotenberg <elie@rotenberg.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elierotenberg/react-styling-demo/issues"
+  },
+  "homepage": "https://github.com/elierotenberg/react-styling-demo"
+}
