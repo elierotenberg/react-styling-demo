@@ -22,16 +22,23 @@ module.exports = function(grunt) {
                 files: {
                     "dist/examples.js": "src/examples.js",
                 },
-                options: {
-                    bundleOptions: {
-                        debug: true,
-                    },
+            },
+        },
+        uglify: {
+            default: {
+                files: {
+                    "dist/examples.min.js": "dist/examples.js",
                 },
+            },
+            options: {
+                mangle: true,
+                compress: true,
             },
         },
     });
     grunt.loadNpmTasks("grunt-browserify");
     grunt.loadNpmTasks("grunt-react");
     grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.registerTask("default", ["react", "jshint", "browserify"]);
+    grunt.loadNpmTasks("grunt-contrib-uglify");
+    grunt.registerTask("default", ["react", "jshint", "browserify", "uglify"]);
 };
