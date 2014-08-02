@@ -22,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/elierotenberg/react-styling-demo/issues"
   },
-  "homepage": "https://github.com/elierotenberg/react-styling-demo"
+  "homepage": "https://github.com/elierotenberg/react-styling-demo",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "react": "^0.11.1",
+    "react-animate": "0.0.5",
+    "react-css": "0.0.2"
+  },
+  "devDependencies": {
+    "grunt-browserify": "^2.1.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-react": "^0.9.0"
+  }
 }
