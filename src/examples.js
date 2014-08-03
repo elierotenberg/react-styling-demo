@@ -9,6 +9,7 @@ var Components = {
 
 function main() {
     "use strict";
+    React.initializeTouchEvents(true);
     _.each(Components, function(Component, name) {
         var el = document.getElementById(name);
         if(el) {
