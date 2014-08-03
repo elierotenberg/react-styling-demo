@@ -33,7 +33,7 @@ var SpinWheel = React.createClass({
     render: function render() {
         return (
             <div>
-                <a onClick={this.spin}  onTouchStart={this.spin}>Click to spin !</a>
+                <a onClick={this.spin}>Click to spin !</a>
                 { this.state.spinning ? (
                     <div style={this.getAnimatedStyle("spinning")}>Spin to win</div>
                 ) : null }
