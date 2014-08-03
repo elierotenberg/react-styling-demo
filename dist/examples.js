@@ -8238,7 +8238,7 @@ var AnimateMixin = {
                 else {
                     from[k] = "translateZ(0) " + from[k];
                 }
-                if(!_.jas(to, k)) {
+                if(!_.has(to, k)) {
                     to[k] = "translateZ(0)";
                 }
                 else {

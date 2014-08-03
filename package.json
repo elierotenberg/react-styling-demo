@@ -27,7 +27,7 @@
     "grunt-contrib-uglify": "^0.5.1",
     "lodash": "^2.4.1",
     "react": "^0.11.1",
-    "react-animate": "^0.1.1",
+    "react-animate": "^0.1.2",
     "react-css": "0.0.2"
   },
   "devDependencies": {
