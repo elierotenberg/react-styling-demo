@@ -38,7 +38,7 @@ var SimpleAnimationWithCSS = React.createClass({
     render: function render() {
         return (
             <div>
-                <a onClick={this.showOff}>Click to show off !</a>
+                <a onClick={this.showOff} onTouchStart={this.showOff}>Click to show off !</a>
                 { this.state.showoff ? (
                     <div style={this.getAnimatedStyle("my-custom-animation")}>What a show off !</div>
                 ) : null }

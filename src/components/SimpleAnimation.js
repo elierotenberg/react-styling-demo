@@ -27,7 +27,7 @@ var SimpleAnimation = React.createClass({displayName: 'SimpleAnimation',
     render: function render() {
         return (
             React.DOM.div(null, 
-                React.DOM.a({onClick: this.showOff}, "Click to show off !"), 
+                React.DOM.a({onClick: this.showOff, onTouchStart: this.showOff}, "Click to show off !"), 
                  this.state.showoff ? (
                     React.DOM.div({style: this.getAnimatedStyle("my-custom-animation")}, "What a show off !")
                 ) : null

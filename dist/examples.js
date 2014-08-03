@@ -52166,7 +52166,7 @@ var SimpleAnimation = React.createClass({displayName: 'SimpleAnimation',
     render: function render() {
         return (
             React.DOM.div(null, 
-                React.DOM.a({onClick: this.showOff}, "Click to show off !"), 
+                React.DOM.a({onClick: this.showOff, onTouchStart: this.showOff}, "Click to show off !"), 
                  this.state.showoff ? (
                     React.DOM.div({style: this.getAnimatedStyle("my-custom-animation")}, "What a show off !")
                 ) : null
@@ -52218,7 +52218,7 @@ var SimpleAnimationWithCSS = React.createClass({displayName: 'SimpleAnimationWit
     render: function render() {
         return (
             React.DOM.div(null, 
-                React.DOM.a({onClick: this.showOff}, "Click to show off !"), 
+                React.DOM.a({onClick: this.showOff, onTouchStart: this.showOff}, "Click to show off !"), 
                  this.state.showoff ? (
                     React.DOM.div({style: this.getAnimatedStyle("my-custom-animation")}, "What a show off !")
                 ) : null
@@ -52287,7 +52287,7 @@ var SpinWheel = React.createClass({displayName: 'SpinWheel',
     render: function render() {
         return (
             React.DOM.div(null, 
-                React.DOM.a({onClick: this.spin}, "Click to spin !"), 
+                React.DOM.a({onClick: this.spin, onTouchStart: this.spin}, "Click to spin !"), 
                  this.state.spinning ? (
                     React.DOM.div({style: this.getAnimatedStyle("spinning")}, "Spin to win")
                 ) : null
