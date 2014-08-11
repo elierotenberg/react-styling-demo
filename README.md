@@ -12,9 +12,13 @@ React with styles
 ### <a name='demos'>Demos</a>
 
 - [Simple animation](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.html)
+![Simpe animation](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.gif)
 - [Simple CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.html)
+![Simpe CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.gif)
 - [Simple animation and CSS combined](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.html)
+![Simpe animation with CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.gif)
 - [Slightly more advanced demo (wheel spinner)](http://elie.rotenberg.io/react-styling-demo/dist/SpinWheel.html)
+![Slightly more advanced demo (wheel spinner)](http://elie.rotenberg.io/react-styling-demo/dist/SpinWheel.gif)
 - [All demos in 1 page](http://elie.rotenberg.io/react-styling-demo/dist/index.html) (without code)
 
 ### <a name='motivation'>Motivation</a>
@@ -27,6 +31,9 @@ One striking example is styling and animation. React supports inline-styling inj
 My first approach was to use CSS transitions to do the job, and toggle classes in a components [render()](http://facebook.github.io/react/docs/component-specs.html#render) method. This worked okay, but writing CSS animations is a pain, compared to the very straightforward, imperative approach of Velocity, d3, or jQuery. I had recently spent time reading pretty much all the code of Velocity, which was enlightening, and decided that JS-powered animation was a viable, efficient alternative to the dreadful pain of handwriting CSS transitions. I wanted to re-use Velocity directly, but Velocity works directly on the real DOM, which I wanted to avoid. So I had to port the good ideas of Velocity into React virtual DOM, and make sure performance or usability wouldn't be lost in the process.
 
 ### <a name='react-animate'>react-animate</a>
+
+* Installation: `npm install react-animate`
+* Quick usage: `mixins: [require("react-animate")]` inside a call to `React.createClass`
 
 The base idea is very simple: start an animation with an imperative method call in a component method (an `animate` method), which would be triggered by a callback (such as a `onClick` handler). `animate` would start a series of state changes ocurring a each animation frame, each change of state inducing a re-rendering of the component with the proper interpolated intermediate state. At the end of the animation, a callback would be invoked. A notable detail retained from Velocity that matches very well with React philosophy is that you should (and in `react-animate`, you _must_) always forcefeed both the initial and the final states, to avoid querying the DOM for the initial state. After all, in a React component, you should always be able to tell what the state of the DOM is, since _you_ modified in the first place!
 
