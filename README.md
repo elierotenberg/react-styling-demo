@@ -1,8 +1,7 @@
 React with styles
 =================
 
-* Demos: [Simple animation](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.html), [Simple CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.html), [Simple Animation and Simple CSS combined](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.html), [Less simple demo (wheel spinner)](http://elie.rotenberg.io/react-styling-demo/dist/SpinWheel.html), [All of the above](http://elie.rotenberg.io/react-styling-demo/dist/index.html)
-
+* [Demos](#demos)
 * [Motivation](#motivation)
 * [react-animate](#react-animate)
 * [react-css](#react-css)
@@ -10,6 +9,13 @@ React with styles
 * [Conclusion](#conclusion)
 * [Credits](#credits)
 
+### <a name='demos'>Demos</a>
+
+- [Simple animation](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.html)
+- [Simple CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.html)
+- [Simple animation and CSS combined](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.html)
+- [Slightly more advanced demo (wheel spinner)](http://elie.rotenberg.io/react-styling-demo/dist/SpinWheel.html)
+- [All demos in 1 page](http://elie.rotenberg.io/react-styling-demo/dist/index.html) (without code)
 
 ### <a name='motivation'>Motivation</a>
 For a while now, I've been a [React](http://reactjs.org) enthusiast. However, almost every React code I had a chance to read was either very small examples from the contributors repos or contrived cases or butchery to forcefeed React into AngularJS apps.
@@ -61,6 +67,9 @@ With this idea in mind, the rest is just implementation details, most of which h
 You can watch the [demo](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.html), and use this mixin right now by `npm install`-ing `react-animate` or from [Github](https://github.com/elierotenberg/react-animate). The repo is a bit heavy right now since I require all `d3` but I may cut the unnecessary parts at some point in the future.
 
 ### <a name='react-css'>react-css</a>
+
+* Installation: `npm install react-css`
+* Quick usage: `require("react-css").fromCSS(...)`
 
 After solving this animation problem, I quickly faced another problem when dealing with styling in React: vendor-prefixing css properties. It is a related but fundamentally different problem.
 While vendor-prefixing will ultimately become irrelevant in the happy world of evergreen browsers, many properties and values in many browsers still need to be vendor-prefixed for a significant part of our users.
@@ -147,7 +156,7 @@ You can see two demos, a [simple](http://elie.rotenberg.io/react-styling-demo/di
 One annoying thing with react is that very often, to comply with react coding style and gain the most from its internal optimization, you can't re-use directly libs that are conceived for the DOM. You typically either have to re-write them entirely or unwrap some of their internals to make them work on react's virtual dom instead of vanilla DOM.
 However, this annoyance is well compensated. First, it is an opportunity to really understand what makes these libs so efficient (or conversely, to understand whether they are really required in the first place). Second, the effort is actually minimal. It took me no more than a few hours to have react-animate work fine, since I could re-use the internals of d3, so all I had to do was to come up with a useable API and rewrap the internals of d3 to work on the render/update loop of React rather than in the imperative style of vanilla DOM APIs. I'd definitely do it again, also, since I think React is really awesome and only needs a few more bricks in its ecosystem (style being one of them, now partially solved) to be fully mature.
 
-I'll keep react-animated and react-css up-to-date, since I use them on a daily basis for my own projects. My plans for the future include improving styling support. My next step will probably to find a way to define true CSS classes associated with the components in a declarative, in-code manner, to avoid relying only on inline-styling when some things should be kept and the class/stylesheet level, but should still be declared in a components source file instead of a stylesheet file.
+I'll keep `react-animate` and `react-css` up-to-date, since I use them on a daily basis for my own projects. My plans for the future include improving styling support. My next step will probably to find a way to define true CSS classes associated with the components in a declarative, in-code manner, to avoid relying only on inline-styling when some things should be kept and the class/stylesheet level, but should still be declared in a components source file instead of a stylesheet file.
 
 ### <a name='credits'>Credits</a>
 
