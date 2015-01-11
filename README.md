@@ -11,15 +11,15 @@ React with styles
 
 ### <a name='demos'>Demos</a>
 
-- [Simple animation](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.html)
-![Simpe animation](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.gif)
-- [Simple CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.html)
-![Simpe CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.gif)
-- [Simple animation and CSS combined](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.html)
-![Simpe animation with CSS](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.gif)
-- [Slightly more advanced demo (wheel spinner)](http://elie.rotenberg.io/react-styling-demo/dist/SpinWheel.html)
-![Slightly more advanced demo (wheel spinner)](http://elie.rotenberg.io/react-styling-demo/dist/SpinWheel.gif)
-- [All demos in 1 page](http://elie.rotenberg.io/react-styling-demo/dist/index.html) (without code)
+- [Simple animation](http://rotenberg.io/react-styling-demo/dist/SimpleAnimation.html)
+![Simpe animation](http://rotenberg.io/react-styling-demo/dist/SimpleAnimation.gif)
+- [Simple CSS](http://rotenberg.io/react-styling-demo/dist/SimpleCSS.html)
+![Simpe CSS](http://rotenberg.io/react-styling-demo/dist/SimpleCSS.gif)
+- [Simple animation and CSS combined](http://rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.html)
+![Simpe animation with CSS](http://rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.gif)
+- [Slightly more advanced demo (wheel spinner)](http://rotenberg.io/react-styling-demo/dist/SpinWheel.html)
+![Slightly more advanced demo (wheel spinner)](http://rotenberg.io/react-styling-demo/dist/SpinWheel.gif)
+- [All demos in 1 page](http://rotenberg.io/react-styling-demo/dist/index.html) (without code)
 
 ### <a name='motivation'>Motivation</a>
 For a while now, I've been a [React](http://reactjs.org) enthusiast. However, almost every React code I had a chance to read was either very small examples from the contributors repos or contrived cases or butchery to forcefeed React into AngularJS apps.
@@ -45,7 +45,7 @@ The base idea is very simple: start an animation with an imperative method call 
         var begin = Date.now(), end = Date.now() + duration;
         function nextAnimationFrame() {
             var t = (Date.now() - begin)/(end - begin);
-            if(t > 1) { 
+            if(t > 1) {
                     // Set this.state.animating to false and invoke callback
             }
             else {
@@ -71,7 +71,7 @@ With this idea in mind, the rest is just implementation details, most of which h
 - stuff this into a React mixin so that any component can be upgraded with animation capabilities
 - leverage hardware acceleration on mobile devices (but not on browser desktops)
 
-You can watch the [demo](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimation.html), and use this mixin right now by `npm install`-ing `react-animate` or from [Github](https://github.com/elierotenberg/react-animate). The repo is a bit heavy right now since I require all `d3` but I may cut the unnecessary parts at some point in the future.
+You can watch the [demo](http://rotenberg.io/react-styling-demo/dist/SimpleAnimation.html), and use this mixin right now by `npm install`-ing `react-animate` or from [Github](https://github.com/elierotenberg/react-animate). The repo is a bit heavy right now since I require all `d3` but I may cut the unnecessary parts at some point in the future.
 
 ### <a name='react-css'>react-css</a>
 
@@ -123,7 +123,7 @@ var MyComponent = React.createClass({
 
 Alternatively, one can memoize fromCSS directly, for example using [`_.memoize`](http://lodash.com/docs#memoize) (watch out for memory leaking, though).
 
-You can see the [demo](http://elie.rotenberg.io/react-styling-demo/dist/SimpleCSS.html) and use `fromCSS` right now by `npm install`-ing `react-css` or from [Github](https://github.com/elierotenberg/react-css).
+You can see the [demo](http://rotenberg.io/react-styling-demo/dist/SimpleCSS.html) and use `fromCSS` right now by `npm install`-ing `react-css` or from [Github](https://github.com/elierotenberg/react-css).
 
 ### <a name='react-animate-with-react-css'>react-animate + react-css </a>
 
@@ -155,7 +155,7 @@ var SimpleAnimationWithCSS = React.createClass({
 });
 ```
 
-You can see two demos, a [simple](http://elie.rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.html) and a [less simple](http://elie.rotenberg.io/react-styling-demo/dist/SpinWheel.html).
+You can see two demos, a [simple](http://rotenberg.io/react-styling-demo/dist/SimpleAnimationWithCSS.html) and a [less simple](http://rotenberg.io/react-styling-demo/dist/SpinWheel.html).
 
 
 ### <a name='conclusion'>Conclusion</a>
